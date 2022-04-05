@@ -27,8 +27,7 @@ class ReallyShakyBankingCoreSystemService implements BankingCoreSystmeService {
 
     @Override
     public void transfer(Transaction tx, String fromAccount, String toAccount) {
-        Account from = getOrCreateAccount(fromAccount);
-        Account to = getOrCreateAccount(toAccount);
+       etOrCreateAccount(toAccount);
         from.setBalance(from.getBalance().subtract(valueOf(tx.getAmount())));
         to.setBalance(to.getBalance().add(valueOf(tx.getAmount())));
     }
